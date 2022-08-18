@@ -19,3 +19,6 @@ $ py manage.py migrate
 
 # serve with hot reload
 $ py manage.py runserver
+
+# create user
+$ py manage.py createsuperuser
