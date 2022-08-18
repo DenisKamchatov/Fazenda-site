@@ -1,6 +1,7 @@
 # Fazenda-Django-site
 
-Django website for Fazenda Cottage Village
+Django website for Fazenda Cottage Village. 
+There is an admin panel available at /admin
 
 ## Versions
 1) Python - 3.9.5
