@@ -1,0 +1,212 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'app/css/zeroing-file.min.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/style.min.css' %}">
+    <title>Коттедж "Фазенда", 5 км от Екатеринбурга - официальный сайт</title>
+    <meta name="description"
+        content="Мы предлагаем Вам посуточную аренду коттеджа «Фазенда». Он располагается в двух километрах от города Екатеринбурга в тихом, чистом месте. Здесь вы можете отдохнуть на природе от городской суеты - снять коттедж на выходные и провести отдых со своей семьей, друзьями!">
+    <meta name="keywords" content="коттедж фазенда, коттедж, снять, арендовать, екатеринбург">
+    <meta name="robots" content="index">
+    <meta name="author" content="Kamchatov Denis, email: kamcatovdenis@gmail.com">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header__contact-info contact-info">
+            <div class="container">
+                <div class="contact-info__inner">
+                    <a class="contact-info__phone phone-hover" href="#">
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M15.675 20.0833C11.7624 20.0782 8.01151 18.5217 5.24489 15.7551C2.47826 12.9884 0.921743 9.23754 0.916672 5.32495C0.916672 4.15578 1.38112 3.03451 2.20784 2.20778C3.03457 1.38106 4.15584 0.916613 5.32501 0.916613C5.57258 0.914728 5.81974 0.937197 6.06292 0.983697C6.29801 1.01848 6.52912 1.07626 6.75292 1.1562C6.91033 1.21142 7.05059 1.30678 7.15984 1.43284C7.26909 1.5589 7.34354 1.71129 7.37584 1.87495L8.68876 7.62495C8.72414 7.78102 8.71988 7.94348 8.67636 8.09748C8.63283 8.25149 8.55144 8.39215 8.43959 8.50661C8.31501 8.64078 8.30542 8.65036 7.12667 9.2637C8.07062 11.3345 9.72682 12.9975 11.7938 13.9499C12.4167 12.7616 12.4263 12.752 12.5604 12.6274C12.6749 12.5156 12.8155 12.4342 12.9696 12.3907C13.1236 12.3472 13.286 12.3429 13.4421 12.3783L19.1921 13.6912C19.3505 13.728 19.497 13.8044 19.6177 13.9134C19.7384 14.0224 19.8294 14.1603 19.8821 14.3141C19.963 14.5416 20.0239 14.7757 20.0642 15.0137C20.1027 15.2545 20.122 15.4981 20.1217 15.742C20.104 16.9062 19.6265 18.0161 18.7934 18.8294C17.9603 19.6428 16.8393 20.0935 15.675 20.0833ZM5.32501 2.83328C4.66495 2.8358 4.03265 3.09913 3.56592 3.56586C3.09919 4.03259 2.83586 4.66489 2.83334 5.32495C2.83588 8.72999 4.18965 11.9948 6.59738 14.4026C9.00511 16.8103 12.27 18.1641 15.675 18.1666C16.3351 18.1641 16.9674 17.9008 17.4341 17.434C17.9008 16.9673 18.1641 16.335 18.1667 15.6749V15.3587L13.72 14.3333L13.4421 14.8604C13.0108 15.6941 12.6946 16.2979 11.8896 15.972C10.3015 15.4036 8.86001 14.4886 7.66979 13.2934C6.47958 12.0982 5.57055 10.6529 5.00876 9.06245C4.66376 8.31495 5.31542 7.96995 6.13959 7.5387L6.66667 7.27995L5.64125 2.83328H5.32501Z"
+                                fill="#969696" />
+                        </svg>
+                    </a>
+
+                    <h6><a class="contact-info__number phone-hover" href="tel: {{ contacts.0.number }}">
+                            {{ contacts.0.number }}</a><span> |
+                            Работаем 7
+                            дней в
+                            неделю
+                            |
+                            9:00
+                            — 18:00</span></h6>
+                </div>
+            </div>
+        </div>
+        <div class="header__inner">
+            <nav class="header__nav">
+                <div class="header__wrapper">
+
+                    <h2 class="header__logo"><a class="link" href="{% url 'home' %}">FAZENDA-ekb</a></h2>
+
+                    <div class="header__menu-toggle icon">
+                        <div class="header__hamburger"></div>
+                    </div>
+
+                    <ul class="header__menu menu">
+                        <li class="menu__link"><a class="link" href="{% url 'home' %}#welcome">О нас</a></li>
+                        <li class="menu__link"><a class="link" href="{% url 'home' %}#cottages">Коттеджи</a></li>
+                        <li class="menu__link"><a class="link" href="{% url 'photogallery' %}">Фотогалерея</a></li>
+                        <li class="menu__link"><a class="link" href="{% url 'home' %}#contacts">Контакты</a></li>
+                    </ul>
+
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="main__gallery gallery">
+            <div class="container">
+                <div class="gallery__inner">
+                    <div class="title-block">
+                        <h2 class="gallery__title title">Фотогалерея
+                            <hr class="hr-title">
+                        </h2>
+                    </div>
+                    <div class="gallery__photos">
+                        {% for p in photogallery %}
+                        <a href="#" class="gallery__photo js-open-modal"
+                            style="background: url({{ p.photo.url }}) center / cover no-repeat;"
+                            data-modal="{{ p.id }}">
+                            <svg class="gallery__loupe" xmlns:dc="http://purl.org/dc/elements/1.1/"
+                                xmlns:cc="http://creativecommons.org/ns#"
+                                xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                                xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="Capa_1"
+                                x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+                                xml:space="preserve" sodipodi:docname="loupe.svg"
+                                inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
+                                <metadata id="metadata49">
+                                    <rdf:RDF>
+                                        <cc:Work rdf:about="">
+                                            <dc:format>image/svg+xml</dc:format>
+                                            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+                                            <dc:title></dc:title>
+                                        </cc:Work>
+                                    </rdf:RDF>
+                                </metadata>
+                                <defs id="defs47" />
+                                <sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1"
+                                    objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0"
+                                    inkscape:pageshadow="2" inkscape:window-width="2160" inkscape:window-height="1360"
+                                    id="namedview45" showgrid="false" inkscape:zoom="1.4355469" inkscape:cx="256"
+                                    inkscape:cy="256" inkscape:window-x="-11" inkscape:window-y="-11"
+                                    inkscape:window-maximized="1" inkscape:current-layer="Capa_1" />
+                                <g id="g6" style="fill:#eaeef3;fill-opacity:1">
+                                    <g id="g4" style="fill:#eaeef3;fill-opacity:1">
+                                        <path
+                                            d="M308.905,88.694c-11.965-11.964-25.646-21.816-40.663-29.282c-3.797-1.887-8.402-0.34-10.289,3.456    c-1.887,3.796-0.34,8.402,3.456,10.289c13.527,6.724,25.855,15.603,36.641,26.391c54.54,54.54,54.54,143.284,0,197.824    c-26.42,26.421-61.548,40.971-98.911,40.971c-37.365,0-72.492-14.55-98.912-40.971c-26.421-26.42-40.971-61.548-40.971-98.912    c0-37.364,14.55-72.492,40.971-98.912c15.939-15.939,34.827-27.48,56.137-34.303c20.339-6.511,42.287-8.288,63.466-5.139    c4.198,0.625,8.099-2.27,8.721-6.463c0.622-4.193-2.27-8.097-6.463-8.72c-23.493-3.493-47.839-1.522-70.405,5.703    c-23.328,7.468-44.876,20.632-62.312,38.068c-29.319,29.319-45.466,68.301-45.466,109.766c0,41.465,16.147,80.447,45.466,109.766    c29.32,29.32,68.302,45.467,109.767,45.467c41.463,0,80.446-16.147,109.766-45.467C369.43,247.7,369.43,149.219,308.905,88.694z"
+                                            id="path2" style="fill:#eaeef3;fill-opacity:1" />
+                                    </g>
+                                </g>
+                                <g id="g12" style="fill:#eaeef3;fill-opacity:1">
+                                    <g id="g10" style="fill:#eaeef3;fill-opacity:1">
+                                        <path
+                                            d="M499.76,441.314L365.463,307.019c23.859-36.733,34.945-80.778,31.279-124.757c-3.891-46.686-24.299-90.672-57.463-123.856    C301.646,20.751,251.744,0.008,198.765,0c-0.013,0-0.018,0-0.031,0C145.768,0,95.867,20.728,58.232,58.363    c-77.472,77.473-77.471,203.53,0.001,281.002c33.183,33.183,77.174,53.605,123.871,57.504    c43.996,3.672,88.044-7.409,124.785-31.276l134.296,134.295c8.075,8.075,18.68,12.112,29.287,12.112s21.213-4.037,29.288-12.112    C515.908,483.739,515.908,457.463,499.76,441.314z M488.906,489.034c-10.166,10.165-26.704,10.164-36.868,0L313.275,350.27    c-1.485-1.485-3.451-2.248-5.429-2.248c-1.526,0-3.061,0.454-4.388,1.38c-34.843,24.301-77.477,35.725-120.076,32.171    c-43.084-3.598-83.674-22.442-114.293-53.062C-2.4,257.024-2.401,140.705,69.087,69.217    c34.738-34.738,80.778-53.867,129.647-53.867c0.009,0,0.02,0,0.029,0c48.878,0.007,94.926,19.152,129.66,53.907    c30.602,30.62,49.433,71.206,53.023,114.281c3.543,42.501-7.837,85.056-32.041,119.856c-5.209,6.443-19.6,23.681-26.66,29.802    c-3.203,2.777-3.548,7.624-0.771,10.826c1.518,1.751,3.655,2.647,5.802,2.647c1.782,0,3.573-0.617,5.025-1.876    c6.502-5.638,16.965-17.801,23.319-25.41l132.786,132.785C499.069,462.331,499.069,478.87,488.906,489.034z"
+                                            id="path8" style="fill:#eaeef3;fill-opacity:1" />
+                                    </g>
+                                </g>
+                                <g id="g14">
+                                </g>
+                                <g id="g16">
+                                </g>
+                                <g id="g18">
+                                </g>
+                                <g id="g20">
+                                </g>
+                                <g id="g22">
+                                </g>
+                                <g id="g24">
+                                </g>
+                                <g id="g26">
+                                </g>
+                                <g id="g28">
+                                </g>
+                                <g id="g30">
+                                </g>
+                                <g id="g32">
+                                </g>
+                                <g id="g34">
+                                </g>
+                                <g id="g36">
+                                </g>
+                                <g id="g38">
+                                </g>
+                                <g id="g40">
+                                </g>
+                                <g id="g42">
+                                </g>
+                            </svg>
+                            <div class="gallery__block"></div>
+                        </a>
+                        <div class="modal js-modal" data-modal="{{ p.id }}">
+                            <svg class="modal__cross js-modal-close" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35 35">
+                                <path fill="#161616"
+                                    d="M4.685 27.313c-6.248-6.248-6.248-16.379 0-22.627 6.25-6.248 16.379-6.248 22.629 0 6.248 6.248 6.248 16.379 0 22.627-6.25 6.249-16.379 6.249-22.629 0zM24.486 7.514c-4.688-4.687-12.285-4.687-16.971 0-4.688 4.687-4.688 12.284 0 16.971 4.686 4.687 12.283 4.687 16.971 0 4.686-4.687 4.686-12.284 0-16.971zM11.758 23.071l-2.828-2.829 4.242-4.242-4.242-4.242 2.828-2.829 4.242 4.243 4.242-4.243 2.828 2.829-4.242 4.242 4.242 4.242-2.828 2.829-4.242-4.243-4.242 4.243z">
+                                </path>
+                            </svg>
+
+                            <picture class="photogallery__picture">
+                                <source srcset="{{ p.photo.url }}" type="image/webp">
+                                <img class="photogallery__image" src="{{ p.photo.url }}" alt="">
+                            </picture>
+                        </div>
+                        {% endfor %}
+
+                        <div class="overlay js-modal-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__wrapper footer__about-us">
+                    <div class="about-us">
+                        <h5 class="about-us__title footer-title">О нас</h5>
+                        <h6 class="about-us__text footer-text"> Мы предлагаем Вам посуточную аренду коттеджа «Фазенда».
+                            Он
+                            располагается в
+                            двух километрах от города в тихом, чистом месте.
+                            К Вашим услугам 3 спальни, 2 санузла, гостиная, плазменный телевизор, DVD, караоке,
+                            полностью
+                            оборудованная кухня, большая беседка с мангалом. Общая площадь дома 300 м2.
+                        </h6>
+                    </div>
+                </div>
+                <div class="footer__wrapper footer__footer-contacts">
+                    <div class="footer-contacts">
+                        <h5 class="footer-contacts__title footer-title">Контакты</h5>
+                        <h6 class="footer-contacts__text footer-text">
+                            <p class="footer-post-title">Номера телефонов:</p>
+                            {% for num in contacts %}
+                            <a class="link link-number" href="tel: {{ num.number }}">{{ num.number }}</a>
+                            {% endfor %}
+                            <p class="footer-post-title">Адрес:</p>
+                            <p>Полевской тракт, 2 км (схема проезда)</p>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'app/js/slick.min.js' %}"></script>
+    <script src="{% static 'app/js/script.min.js' %}"></script>
+</body>
+
+</html>
